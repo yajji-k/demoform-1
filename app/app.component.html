@@ -1,0 +1,104 @@
+<section>
+  <div id="navbar">
+    <mat-toolbar color="primary">
+      <button mat-button>Employee</button>
+      <button mat-button>Login</button>
+    </mat-toolbar>
+  </div>
+</section>
+
+<section>
+  <div id="currency">
+    <div id="currency-line">Current Timezone: IST</div>
+    <div id="currency-line">Currency: INR</div>
+  </div>
+</section>
+
+<section>
+  <div id="Formheading1">
+    <span class="mat-headline-4">Employee Management</span>
+    <mat-divider></mat-divider>
+  </div>
+
+</section>
+
+<section id="formview">
+  
+    <div id="formfill">
+        <span class="mat-headline-5">Employee Form</span>
+        <mat-divider></mat-divider>
+        <div id="formformat">
+          <div class="row">
+            <div class="col mb-3">
+                <label for="firstname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstname" formControlName="firstname">
+            </div>
+            <div class="col mb-3">
+              <label for="lastname" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastname" formControlName="lastname">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-3">
+                <label for="contactno" class="form-label">Contact No.</label>
+                <input type="text" class="form-control" id="empcontactno" formControlName="empcontactno">
+            </div>
+            <div class="col mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="text" class="form-control" id="email" formControlName="email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-3">
+              <label for="dob">DOB</label>
+              <input type="date" class="form-control" id="dob" formControlName="dob">
+            </div>
+            <div class="col mb-3">
+              <label for="address">Address</label>
+              <textarea class="form-control" id="address"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <button mat-flat-button class="submit-button" color="primary">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+    
+    <div id="tabledisplay">
+      <span class="mat-headline-5">Employee Records</span>
+      <mat-divider></mat-divider>
+      <div class="tableformat">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+        
+          <!-- Weight Column -->
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> Weight </th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+          </ng-container>
+        
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> Symbol </th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+      </div>
+    </div>
+
+</section>

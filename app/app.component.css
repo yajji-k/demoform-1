@@ -1,0 +1,50 @@
+section{
+    margin: 1rem;
+}
+
+#formview{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#currency{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#currency-line{
+    width: 175px;
+}
+
+#Formheading1{
+    color: green;
+}
+
+#formfill{
+    width: 45%;    
+}
+
+.mat-headline-5{
+    color: green;
+}
+#tabledisplay{
+    margin-left: 2rem;
+    width: 45%;
+}
+
+#formformat{
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+
+.submit-button{
+    width: 100%;
+}
+
+#formdisplay{
+    align-items: left; 
+    width: 50%;
+}
+
